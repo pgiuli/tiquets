@@ -1,11 +1,11 @@
-from ast import Break
 import os
 import os.path
+from time import sleep
 from PIL import Image, ImageFont, ImageDraw
 
 
 
-#Escullim Font
+#Escollim Font
 title_font = ImageFont.truetype('assets/font.ttf', 32)
 #Assignem Resolucio
 resolucio = 285, 119
@@ -18,6 +18,7 @@ def crearTickets(quantitat):
         os.mkdir("imatges")
     else:
         print("La carpeta amb els tiquets ja existeix! Elimina-la per crear-ne de nous!")
+        sleep(3)
         exit()
 
     input("Presiona Enter per a començar...")
@@ -59,6 +60,7 @@ def crearTickets(quantitat):
         print('Finalitzada imatge : '+ str(i))
 
         i+=1
+    
     print("""
     Finalitzat!
     """)
@@ -67,8 +69,7 @@ def crearTickets(quantitat):
 
 
 
-print("""
-Creador de tiquets de entrada al pàrquing.
+print("""Creador de tiquets de entrada al pàrquing.
 Per: Spork
 """)
 
